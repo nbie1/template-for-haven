@@ -1,10 +1,12 @@
 # Một template đơn giản cho cuộc thi Haven HCMC 2026 :D
+
 Template này bao gồm:
 - Asset cơ bản để tạo nhân vật chơi và layout tạo level cơ bản
 - 2 script điều khiển người chơi (platformer và top-down)
 - 1 scene platformer cơ bản để giới thiệu người dùng
 - Setting exports cơ bản cho web itch.io
 - Setup project cơ bản (phím điều khiển, màu nền scene)
+
 Files:
 - `assets`: chứa sprite cơ bản cho player và layout tạo level
 - `player.tscn`: scene chính của player, bao gồm sprite và collision
