@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://cka4paar8fc4j"]
+
+[ext_resource type="Script" uid="uid://dx0hq84c6hv80" path="res://platformer_controller.gd" id="1_onrkg"]
+[ext_resource type="Texture2D" uid="uid://dhy6wr0f4xghj" path="res://assets/player1.png" id="2_onrkg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v8siw"]
+size = Vector2(59, 60)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_v8siw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_onrkg")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Player" type="CharacterBody2D" unique_id=196712440 node_paths=PackedStringArray("PlayerSprite", "PlayerCollider")]
+collision_mask = 2
+script = ExtResource("1_onrkg")
+PlayerSprite = NodePath("Sprite")
+PlayerCollider = NodePath("Hitbox")
+
+[node name="Hitbox" type="CollisionShape2D" parent="." unique_id=1155705996]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_v8siw")
+
+[node name="Sprite" type="AnimatedSprite2D" parent="." unique_id=1949602499]
+sprite_frames = SubResource("SpriteFrames_v8siw")
